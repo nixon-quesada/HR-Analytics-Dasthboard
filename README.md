@@ -1,6 +1,6 @@
-# Emerson-x-DAPH-National-Data-Challenge-Manufacturing-Dashboard
+# HR Analytics Dashboard
 
-![image](https://github.com/user-attachments/assets/046c6208-85f1-4e01-b0b6-d517fb30386c)
+<img width="1500" height="866" alt="image" src="https://github.com/user-attachments/assets/fd01828a-b55a-4b5d-ae91-184133762323" />
 
 
 ### 📁 Project Structure
@@ -10,90 +10,57 @@ Loan-Approval-Machine-Learning-Project-Learning-Classification-using-XGBoost-and
 │
 ├── README.md
 │
-├── assets/
-│   ├── backgrounds
-│   ├── icons
-│   └── inspirations
-│
-├── data/
-│   ├── Manufacturing Line Productivity.xlsx
+├── dataset/
+│   ├── Performance.csv
+│   ├── Employee.csv
+│   ├── SastisfactionLevel.csv
+│   ├── EducationLevel.csv
+│   ├── RatingLevel.csv
 │
 ├── output/
 │   ├── dashboard
-│   ├── data analysis
-│   └── screenshot
 ```
 
 ### Project Background
-Developed as part of the Emerson x Data Analytics Philippines Challenge, this project features a dynamic and insightful dashboard built from real-world manufacturing line data.
+Part of Datacamp's Online Learning Platform and Data Engineering Philippines Scholarship program, this is a redesign of the final output on the "Case Study: HR Analytics in Power BI" Course of BI Analyst career tracks program.
+This is a makeover of the final output as well as additional deep dive analysis to uncover better insights that was taught in the course program making it a more portfolio worthy project.
 
-The primary objective was to design a production-ready analytics dashboard that not only surfaces critical operational insights but also serves as a testament to our data analytics expertise—from data wrangling and visualization to actionable interpretation tailored for industrial decision-making.
+<img width="1919" height="921" alt="image" src="https://github.com/user-attachments/assets/27e3db0b-76b2-4b50-a3f6-3d4da01865ed" />
 
-![image](https://github.com/user-attachments/assets/e365fd61-8536-4c00-aabf-3bd0ff0885c6)
 
 ### Data Structure & Initial Checks
 
-Manufacturing Line Productivity dataset structure as seen below is an excel workbook consists of 4 sheets: Line Production, Products, Downtime Factors and Line Downtime with a total of row count of 117 records.
+Composed of 5 tables, 4 being a dimension(Employee, Satisfied Level, Education Level, Rating Level) and a central Fact table (Performance)
+<img width="1185" height="809" alt="image" src="https://github.com/user-attachments/assets/a582be0a-49ef-4dd7-a2b2-b6978e99cc22" />
 
-![image](https://github.com/user-attachments/assets/81a24ee4-6f99-45c1-b8dd-611c44573e27)
-
+Metadata:
+<img width="962" height="426" alt="image" src="https://github.com/user-attachments/assets/a21ec0d4-a0dd-4e84-ab63-66398dad7c60" />
+<img width="962" height="812" alt="image" src="https://github.com/user-attachments/assets/350ba136-2598-43ea-9a63-d3b791c3122d" />
+<img width="964" height="592" alt="image" src="https://github.com/user-attachments/assets/5f1fc5c2-776b-4a7a-a46c-9011138fc8ad" />
 
 ### Executive Summary
 
-![image](https://github.com/user-attachments/assets/78cf5dc2-56f9-460a-8b9e-37130a5a85d9)
+The overall project is a case study about HR analysis using all the skills and knowledge of all the previous courses in the BI analyst career track, for most part this course is basically a hands on application of all the theory taught so far, it doesnt have that deep analysis but allows you to utilize all the skills you learned so far in the career course. What I did was to take it a level ahead and do a dashboard makeover with a deeper analysis to uncover insights in the dataset provided in the course.
+
+Before:
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/dfe6e4d2-66a0-4868-8a84-a4053530cbc6" />
+
+
+After:
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/f27bf9a8-f0c1-4dbf-af42-ca2bf2a6f54c" />
 
 Overview of Findings:
-The production line is experiencing significant performance challenges, primarily driven by unplanned downtimes, which account for a substantial 56% of the total operating time. Over half of these downtimes are attributed to machine failures and inventory shortages often requiring frequent machine adjustments and additionally prolonged batch changeovers both contributed to 36% of the total downtime, further compounding the issue. 
-As a result, the team is frequently required to work overtime to meet scheduled production targets, highlighting the urgent need for operational improvements.
+Most of the analysis in the course are just basic descriptive statistics like number of active and inactive employee, total employee count, number of employee by gender, ethnicity, age as well as displaying intermediate KPI analysis which is the attrition where you apply the DAX techniques taught so far, in the end it's basically a basic case study aimed to apply and have the learner get a practice of their knowledge learned througout the course.
 
 ### Insights Deep Dive
 
-Over the 4-day production period, total downtime exceeded 50% of the total operational time, with the majority attributed to recurring machine failures and inventory shortages, along with several minor unplanned interruptions. Notably, 74 minutes of downtime were recorded under the “Others” category, indicating unclassified or untracked issues that may require further investigation.
-
-![image](https://github.com/user-attachments/assets/1550a56b-4c25-419f-97c5-e3a85112dded)
-
-In addition to an unusually long planned downtime due to batch changes on August 29, and the unclassified 74 minutes of downtime, the most critical concern is the series of random machine failures observed between batch processes on August 30. Even more concerning is the recurrence of failures after machine adjustments on September 2, which strongly suggests that the equipment may be approaching end-of-life or in need of replacement.
-
-Furthermore, the persistent inventory shortages point to potential inefficiencies or disruptions in the supply chain, as materials consistently fall short of production requirements. These issues collectively highlight an urgent need for equipment reliability improvements and supply chain optimization.
-
-The primary contributors to total downtime are Machine Adjustments, Batch Changes, Machine Failures, and Inventory Shortages. Notably, two of these—Machine Adjustments and Batch Changes—are currently categorized under Operator Error, despite being planned downtimes related to routine maintenance and operator shift transitions. This classification unfairly skews operator performance metrics and should be re-evaluated, as it may inaccurately reflect on operator efficiency.
-
-Additionally, Labeling Errors should be classified as Operator Error, given that they directly result from improper label switching, a task within the operator's responsibility. Clear categorization will ensure more accurate performance assessments and help target the appropriate areas for process improvement.
-
-![image](https://github.com/user-attachments/assets/3c26ae40-61bb-441a-9a4b-dce772b6ca30)
-
-While product type is not a direct cause of downtimes, it indirectly reflects inefficiencies or disruptions within the supply chain. The leading contributor to downtime—Machine Adjustments—is often a consequence of recurring machine failures, reinforcing the need to prioritize equipment reliability and maintenance strategies.
-
-Moreover, Batch Changes, which rank as the second highest contributor to total downtime, frequently occur in conjunction with inventory shortages and machine failures, suggesting that these issues are interrelated. This further emphasizes that the two most critical areas requiring immediate attention are machine failures and supply chain disruptions, as they trigger a cascading effect on multiple downtime categories.
+Dataset is surprisingly diverse and deep, I did not even thought on uncovering interesting insight but the dataset tells different otherwise, the story from the data tells that the company is bleeding from attrition cost due to the pay gap and descrepancies from technical job roles such as Software Engineer and Data Scientist they are underpaid at way below the average salary line and they are also overworked based on the overtime rate of those people who left, company is also just a nudge below the satisfaction rating level amongs all employee across all the departments and job roles.
 
 # Recommendations:
+Critical Financial Risk: The company is losing an estimated $1.4M annually to turnover costs. This reactive expense represents 15% of our total annual salary budget, indicating a massive inefficiency in human capital investment.
 
-![image](https://github.com/user-attachments/assets/b03b36c7-16ef-4c09-897a-a40472b715b0)
+Root Cause Identified: Attrition is concentrated in Data Scientist (23.75%) and Software Engineer roles. Diagnostic analysis confirms this is driven by a severe pay gap compared to managerial tiers, not by workload or overtime.
 
-### Assumptions and Caveats:
+Urgent Action Needed: Immediate salary adjustments for high-risk technical roles are required to reach the 4.0 Satisfaction Target. Reinvesting a fraction of the $1.9M attrition loss into salaries will likely reduce net costs and stabilize the workforce.
 
-Throughout the analysis, multiple assumptions were made to manage challenges with the data. These assumptions and caveats are noted below:
-- The batch runtimes is effectively the sum of minimum batch time and downtime. However, this creates challenges when applying standard Key Performance Indicator (KPI) formulas. The minimum batch time represents the ideal time required to produce a batch without any interruptions, it is assumed min batch time are runs without errors and not the ideal time. To avoid misinterpretation, especially since many KPI formulas rely heavily on the concept of ideal time, I deliberately avoided using KPI metrics in this analysis to maintain clarity and accuracy.
-  
-- Daily production start times are inconsistent, with no fixed interval observed. As the dataset provides no explanation for this variability, it was ignored from the analysis.
-There is a one-day data gap (Sunday), and September 3 only reflects overtime work carried over from September 2. Additionally, the data is not continuous, with production running only 8 to 10 hours per day over a total span of approximately 2.6 actual production days. Due to this limited and irregular data coverage, hourly breakdowns and the use of slicers were avoided, as they would offer little analytical value and may lead to misinterpretation.
-
-- The dataset did not specify which downtimes were planned or unplanned. For the purpose of analysis, I assumed that Machine Adjustments (maintenance), Batch Changes, and Label Switches—as part of regular production routines—are planned downtimes. All other downtime events were classified as unplanned.
-
-- The criteria for scheduling specific products for production were not specified in the dataset. It is assumed that production scheduling is driven by demand, although no explicit data was available to confirm this.
-
-### Design
-![image](https://github.com/user-attachments/assets/8a964fae-5bd9-4629-aa37-128e76e05707)
-
-- A uniform 10 pt padding was applied around each container, along with a 10 pt internal margin within each graph and visual. This ensures consistent spacing, allowing each element room to "breathe" without clutter. The layout creates a clean, organized appearance, offering a subtle illusion of spaciousness while maintaining a compact and accessible visual structure, with all key visuals comfortably within the viewer’s eye range.
-
-- All design layers have been systematically organized to support future collaboration and seamless handovers. This structure ensures that other designers can easily navigate, modify, or build upon the project, facilitating efficient updates and design changes.
-
-- The dashboard follows a modern minimalist design, utilizing a glassmorphism-inspired UI to achieve a sleek and elegant finish. To maintain a clean and uncluttered interface, supporting details are tucked into info buttons, allowing users to access additional information on demand. The dashboard is designed to be visually adaptive, blending seamlessly with various wallpapers and background themes for a cohesive and refined user experience.
-
-![image](https://github.com/user-attachments/assets/671d799e-e661-4eea-a025-7267a996bb3b)
-
-
-
-
-
+<img width="1500" height="841" alt="image" src="https://github.com/user-attachments/assets/32492fac-1b92-4865-acb4-e83952c3c8cb" />
